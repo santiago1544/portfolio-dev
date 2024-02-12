@@ -1,0 +1,29 @@
+---
+import type { Code, Debug } from "astro:components"
+import ExpirienceItem from "./ExpirienceItem.astro"
+
+const EXPIRIENCE = [
+    {
+      date: "Agosto 2022 / Actualmente",
+      title: "Desarrollador / Diseñador - Independiente",
+      description:
+       "Diseño y desarrollo de aplicativos web con diversos frameworks y tecnologías de manera independiente.",
+    },
+    {
+      date: "Enero 2022 / Julio 2022",
+      title: "Desarrollador - Compañía de Financiamiento Tuya S.A",
+      description:
+       "Diseño de plataformas de aprendizaje para los empleados de Tuya. Desarrollo de las funciones en las plataformas de cursos para los empleados de Tuya, consiguiendo un mayor rendimiento en la partición de conocimientos de los productos de la empresa. Manejo de la herramienta Azure y MarkDown para documentación fortaleciendo la estructura de los proyectos documentados.",
+    }
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">                  
+  {
+    EXPIRIENCE.map((expirience)=>(
+      <li class="mb-10 ms-4">
+        <ExpirienceItem {...expirience}/>
+      </li>
+    ))
+  }
+</ol>
+

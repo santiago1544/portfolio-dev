@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import GitHubIcon from '../components/icons/GitHub.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import Expirience from '../components/Expirience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
+import Code from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
+import Profile from '../components/icons/Profile.astro';
+import AboutMe from '../components/AboutMe.astro'
+import Contact from '../components/icons/Contact.astro';
+---
+
+<Layout 
+  title="Portafolio de Santiago - Desarrollador y programador web con 2 años de experiencia"
+  description='contrata a Santiago para el desarrollo y diseño de aplicativos web'  
+>
+	<main class ="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <img 
+        class="rounded-full size-12 mb-5"
+        src="data:image/jpeg;base64,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"
+        alt="foto personal"
+      >
+      <h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pg-6 lg:pb-10">
+        Hola, Soy Santiago 
+        <a 
+          href="https://www.linkedin.com/in/santiago-sandoval-novoa-04410a1b2/" 
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center hover:scale-105">
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-1xl text-wrap max-w-[700px]">
+        <span>+2 años de experiencia.</span> <span class="text-yellow-200/90"> Desarrollador web y Diseñador UI/UX.</span> <span class="text-red-200/90"> De Bogotá, 
+        Colombia. </span> <span class="opacity-85">Enfocado en crear aplicaciones y diseños web</span> 
+      </h2>
+      <nav class="flex gap-4 mt-7 flex-wrap">
+
+        <SocialPill href="https://www.linkedin.com/in/santiago-sandoval-novoa-04410a1b2/">
+          <LinkedInIcon class="size-4 md:size-6"/>
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/santiago1544?tab=repositories">
+          <GitHubIcon class="size-4 md:size-6"/>
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:sandovalsanty@outlook.com">
+          <MailIcon class="size-4 md:size-6"/>
+          sandovalsanty@outlook.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    
+    
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-5 flex gap-x-3 items-center">
+        <Briefcase class="size-7"></Briefcase>
+        Experiencia Laboral
+      </h2>
+      <Expirience/>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+        <Code class="size-7"/>
+        Proyectos
+      </h2>
+      <Projects/>
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-3xl font-semibold mb-5 flex gap-x-3 items-center">
+        <Profile class="size-7"/>
+        Sobre mi
+      </h2>
+      <AboutMe/>
+    </SectionContainer>
+    
+    <SectionContainer id="contacto">
+      <h2 class="text-3xl font-semibold mb-5 flex gap-x-3 items-center">
+        <Contact class="size-7"/>
+        Contacto
+      </h2>
+      <AboutMe/>
+    </SectionContainer>
+	</main>
+</Layout>
