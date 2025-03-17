@@ -1,12 +1,11 @@
 ---
-import GitHub from "./icons/GitHub.astro"
 import Angular from "./icons/Angular.astro"
 import Boostrap from "./icons/Bootstrap.astro"
 import Typescript from "./icons/TypeScript.astro"
 import Moodle from "./icons/Moodle.astro"
 import Css from "./icons/Css.astro"
-import LinkButton from "./LinkButton.astro"
-import Link from "./icons/Link.astro"
+import React from "./icons/React.astro"
+import Next from "./icons/Next.astro"
 
 const TAGS = {
   ANGULAR: {
@@ -34,17 +33,27 @@ const TAGS = {
     class: "bg-[#FFFFFF] text-black",
     icon: Css,
   },
+  REACT: {
+    name: "React JS",
+    class: "bg-[#61DAFB] text-black",
+    icon: React,
+  },
+  NEXT: {
+    name: "Next JS",
+    class: "bg-[#000000] text-white",
+    icon: Next,
+  },
 
 }
 const PROJECTS = [
   {
-    title: "Api Rick y Morty",
+    title: "CRM BSL",
     description:
-      "Página web que consume la API de Rick y Morty permitiendo en la visualizar un listado de los personajes de la serie, junto con sus datos básicos, y al seleccionar a algún personaje se muestran sus detalles, cuenta con una barra de busqueda para acortar la lista según el personaje que se requiera.",
+      "Sistema de gestión de envíos, el cual tiene como objetivo llevar un monitoreo para la empresa y para los clientes de la misma sobre todos los modulos y funcionalidades que contiene como crear proveedores, asignar mensajeros, gestionar inventarios.",
     link: "#",
     github: "https://github.com/santiago1544/apiRickMorty",
-    image: "/projects/apirick.webp",
-    tags: [TAGS.ANGULAR, TAGS.BOOSTRAP, TAGS.TYPESCRIPT],
+    image: "/projects/Bsl.webp",
+    tags: [TAGS.ANGULAR, TAGS.BOOSTRAP, TAGS.TYPESCRIPT, TAGS.CSS],
   },
   {
     title: "Plataforma Moodle Educativa",
@@ -55,13 +64,21 @@ const PROJECTS = [
     tags: [TAGS.MOODLE, TAGS.CSS],
   },
   {
-    title: "Pokedex con Api Pokemon",
+    title: "Gestión Documental Valor Más",
     description:
-      "Página interactiva que permite a los usuarios consultar los datos principales de un pokemon por medio del nombre que ellos ingresen en la barra de busqueda.",
+      "Sistema de gestión documental en el cual los usuarios pueden tener un control de radicados, administrar los respectivos usuarios que usen la página, tener un historial de reportes, crear dependendencias para unidades administrativas y seleccionar a que regionales van dirigidas.",
     link: "#",
-    image: "/projects/pokemon.jpg",
-    tags: [TAGS.ANGULAR, TAGS.BOOSTRAP, TAGS.TYPESCRIPT],
+    image: "/projects/ValorMas.webp",
+    tags: [TAGS.NEXT, TAGS.CSS, TAGS.REACT],
   },
+  {
+    title: "CRM Trebol jurídico",
+    description:
+      "Sistema de gestión de clientes para un despacho jurídico, permite llevar un control de los clientes, deudores con sus respectivas gestiones y también los pagos que estos tengan pendientes por realizar.",
+    link: "#",
+    image: "/projects/Trebol.webp",
+    tags: [TAGS.NEXT, TAGS.CSS, TAGS.REACT],
+  }
 ]
 ---
 
@@ -95,20 +112,6 @@ const PROJECTS = [
 
       <div class="mt-2 text-gray-400 dark:text-gray-400">{description}</div>
     </div>
-    <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-  </footer>
   </div>
   
 </article>
